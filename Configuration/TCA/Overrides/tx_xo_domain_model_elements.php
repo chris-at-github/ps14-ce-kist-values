@@ -1,17 +1,22 @@
 <?php
 // ---------------------------------------------------------------------------------------------------------------------
 // Weitere Felder in TT-Content
-$tmpHistoryElementsColumns = [
-	'tx_ce_history_date' => [
+$tmpKistValuesElementsColumns = [
+	'tx_ce_kist_values_color_scheme' => [
 		'exclude' => true,
 		'l10n_mode' => 'exclude',
-		'label' => 'LLL:EXT:ce_history/Resources/Private/Language/locallang_tca.xlf:tx_xo_domain_model_elements.date',
+		'label' => 'LLL:EXT:ce_kist_values/Resources/Private/Language/locallang_tca.xlf:tx_xo_domain_model_elements.color_scheme',
 		'config' => [
-			'type' => 'input',
-			'size' => 30,
-			'eval' => 'trim',
+			'type' => 'select',
+			'renderType' => 'selectSingle',
+			'default' => '',
+			'items' => [
+				['', ''],
+				['LLL:EXT:ce_kist_values/Resources/Private/Language/locallang_tca.xlf:tx_xo_domain_model_elements.color_scheme.green-white', 'green-white'],
+				['LLL:EXT:ce_kist_values/Resources/Private/Language/locallang_tca.xlf:tx_xo_domain_model_elements.color_scheme.white-black', 'white-black'],
+			],
 		],
 	],
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_xo_domain_model_elements', $tmpHistoryElementsColumns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_xo_domain_model_elements', $tmpKistValuesElementsColumns);

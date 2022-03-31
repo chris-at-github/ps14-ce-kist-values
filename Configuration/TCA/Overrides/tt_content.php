@@ -26,7 +26,7 @@ $GLOBALS['TCA']['tt_content']['types']['ce_kist_values'] = [
 	',
 ];
 
-$GLOBALS['TCA']['tt_content']['types']['ce_history']['columnsOverrides']['tx_xo_elements']['config']['overrideChildTca'] = [
+$GLOBALS['TCA']['tt_content']['types']['ce_kist_values']['columnsOverrides']['tx_xo_elements']['config']['overrideChildTca'] = [
 	'columns' => [
 		'record_type' => [
 			'config' => [
@@ -45,7 +45,7 @@ $GLOBALS['TCA']['tt_content']['types']['ce_history']['columnsOverrides']['tx_xo_
 	'types' => [
 		'ce_kist_values_default' => [
 			'showitem' => '
-				l10n_diffsource, record_type, --palette--;;header, description, media,
+				l10n_diffsource, record_type, --palette--;;header, description, media, tx_ce_kist_values_color_scheme,
 				--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
 				--palette--;;visibility,
 				--palette--;;access',
