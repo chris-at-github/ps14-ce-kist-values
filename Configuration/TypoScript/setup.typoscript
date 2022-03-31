@@ -1,0 +1,80 @@
+tt_content {
+	ce_kist_values =< lib.contentElement
+	ce_kist_values {
+		templateName = KistValues.html
+		layoutRootPaths {
+			10 = EXT:ce_kist_values/Resources/Private/Layouts/
+			20 = EXT:xna/Resources/Private/Extensions/CeKistValues/Layouts/
+		}
+
+		templateRootPaths {
+			10 = EXT:ce_kist_values/Resources/Private/Templates/
+			20 = EXT:xna/Resources/Private/Extensions/CeKistValues/Templates/
+		}
+
+		partialRootPaths {
+			10 = EXT:ce_kist_values/Resources/Private/Partials/
+			20 = EXT:xna/Resources/Private/Extensions/CeKistValues/Partials/
+		}
+
+		dataProcessing {
+			30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+			30 {
+				as = records
+				table = tx_xo_domain_model_elements
+				pidInList.field = pid
+				where {
+					data = field:uid
+					intval = 1
+					wrap = foreign_uid = |
+				}
+				orderBy = sorting
+
+				dataProcessing {
+					10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+					10 {
+						as = media
+						references.fieldName = media
+					}
+				}
+			}
+
+			110 = Ps\Xo\DataProcessing\SettingsProcessor
+
+			120 = Ps14\CeKistValues\DataProcessing\ModuleProcessor
+			120 {
+				importCss {
+					10 = /assets/css/modules/kist-values.css
+				}
+
+				importJs {
+					10 = /assets/js/modules/kist-values.js
+				}
+			}
+		}
+	}
+}
+
+plugin.tx_xo.settings.modules.kist_values {
+	media {
+		maxHeight = 300
+		cropVariant = default
+		mediaQueries {
+			992 {
+				maxHeight = 300
+				cropVariant = default
+				mediaQuery = (min-width: 992px)
+			}
+			576 {
+				maxHeight = 200
+				cropVariant = default
+				mediaQuery = (min-width: 576px)
+			}
+			0 {
+				maxWidth = 490
+				cropVariant = default
+				mediaQuery = (min-width: 0px)
+			}
+		}
+	}
+}

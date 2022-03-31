@@ -1,0 +1,48 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<div class="ce-history__indicator"></div>
+		<ul class="ce-history__container">
+			<f:for each="{records}" as="record" iteration="iterator">
+				<f:render section="Item" arguments="{data: record.data, record: record, iterator: iterator}" />
+			</f:for>
+		</ul>
+	</f:section>
+
+	<f:section name="Item">
+		<li class="ce-history-item">
+			<div class="ce-history-item__date">{data.tx_ce_history_date}</div>
+			<div class="ce-history-item__content">
+				<f:if condition="{data.title}">
+					<header class="ce-history-item__title">
+						<f:render partial="Header/Header" arguments="{header: data.title, layout: data.title_type}" />
+					</header>
+				</f:if>
+
+				<f:if condition="{data.description}">
+					<f:format.html>{data.description}</f:format.html>
+				</f:if>
+
+				<f:if condition="{record.media}">
+					<ul class="ce-history-item__media">
+						<f:for each="{record.media}" as="media">
+							<f:render section="Media" arguments="{media: media, settings: settings.modules.history.media}" />
+						</f:for>
+					</ul>
+				</f:if>
+			</div>
+		</li>
+	</f:section>
+
+	<f:section name="Media">
+		<li class="ce-history-item__media-item">
+			<f:render partial="Components/Media" section="Picture" arguments="{
+			file: media,
+			image: {
+				maxHeight: settings.maxHeight,
+				cropVariant: settings.cropVariant
+			},
+			sizes: settings.mediaQueries
+		}" />
+		</li>
+	</f:section>
+</div>

@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+	common {
+		elements {
+			ce_kist_values {
+				iconIdentifier = ps14-content-kist-values
+				title = LLL:EXT:ce_kist_values/Resources/Private/Language/locallang_tca.xlf:tx_ce_kist_values.title
+				description = LLL:EXT:ce_kist_values/Resources/Private/Language/locallang_tca.xlf:tx_ce_kist_values.description
+				tt_content_defValues {
+					CType = ce_kist_values
+				}
+			}
+		}
+
+		show := addToList(ce_kist_values)
+	}
+}

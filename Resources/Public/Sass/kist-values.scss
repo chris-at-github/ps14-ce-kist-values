@@ -1,0 +1,49 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Pre-Define Variables
+$iconfont-create-font-face: false !default;
+$iconfont-create-icon-class: false !default;
+
+$stylesheet-context: 'screen' !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../../../../xna/Resources/Public/Sass/functions';
+@import '../../../../xna/Resources/Public/Sass/variables';
+@import '../../../../xna/Resources/Public/Sass/mixins';
+@import '../../../../xna/Resources/Public/Sass/definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Variablen
+$ce-kist-values--use-css: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS
+@include stylesheet-context($stylesheet-context-screen) {
+	@if($ce-kist-values--use-css) {
+
+
+		// -------------------------------------------------------------------------------------------------------------------
+		// >= 576px
+		@include media-breakpoint-up(sm) {
+		}
+
+		// -------------------------------------------------------------------------------------------------------------------
+		// >= 992px
+		@include media-breakpoint-up(lg) {
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Print
+@include stylesheet-context($stylesheet-context-print) {
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// PDF
+@include stylesheet-context($stylesheet-context-pdf) {
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// XNA Override
+@import '../../../../xna/Resources/Public/Sass/xna/modules/kist-values';

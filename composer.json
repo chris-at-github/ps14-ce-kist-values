@@ -1,0 +1,32 @@
+{
+	"name": "ps14/ce-kist-values",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"authors": [
+		{
+			"name": "Christian Pschorr",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^10.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ps14\\CeKistValues\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Ps14\\CeKistValues\\Tests\\": "Tests"
+		}
+	},
+	"replace": {
+		"typo3-ter/ce-kist-values": "self.version"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "ce_kist_values"
+		}
+	}
+}
