@@ -1,0 +1,26 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<ul class="ce-kist-values__container">
+			<f:for each="{records}" as="record" iteration="iterator">
+				<li class="ce-kist-values__item" id="ce-kist-values__item--{record.data.uid}">
+					<f:render section="Item" arguments="{data: record.data, record: record, iterator: iterator, settings: settings}" />
+				</li>
+			</f:for>
+		</ul>
+	</f:section>
+
+	<f:section name="Item">
+		<button aria-controls="ce-kist-values__modal--{data.uid}">
+			<f:if condition="{record.media.0}">
+				<f:render partial="Components/Media" section="Picture" arguments="{
+					file: record.media.0,
+					image: {
+						maxHeight: settings.modules.kist_values.media.maxHeight,
+						cropVariant: settings.modules.kist_values.media.cropVariant
+					},
+					sizes: settings.modules.kist_values.media.mediaQueries
+				}" />
+			</f:if>
+		</button>
+	</f:section>
+</div>

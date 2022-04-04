@@ -8,7 +8,8 @@
 
 	<f:section name="Variant-0">
 		<f:if condition="{records}">
-			<f:render partial="History/Records" section="Main" arguments="{_all}" />
+			<f:render partial="KistValues/Listing" section="Main" arguments="{_all}" />
+			<f:render partial="KistValues/Modal" section="Main" arguments="{_all}" />
 		</f:if>
 	</f:section>
 </html>
