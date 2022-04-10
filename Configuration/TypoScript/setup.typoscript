@@ -76,13 +76,18 @@ plugin.tx_xo.settings.modules.kist_values {
 		}
 
 		modal {
-			maxHeight = 500
+			maxWidth = 280
 			cropVariant = default
 			mediaQueries {
 				992 {
-					maxHeight = 370
+					maxWidth = 280
 					cropVariant = default
 					mediaQuery = (min-width: 992px)
+				}
+				576 {
+					maxWidth = 180
+					cropVariant = default
+					mediaQuery = (min-width: 576px)
 				}
 				0 {
 					maxWidth = 460
