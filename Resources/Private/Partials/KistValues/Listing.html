@@ -2,7 +2,7 @@
 	<f:section name="Main">
 		<ul class="ce-kist-values__container">
 			<f:for each="{records}" as="record" iteration="iterator">
-				<li class="ce-kist-values__item" id="ce-kist-values__item--{record.data.uid}">
+				<li class="ce-kist-values__item" id="ce-kist-values__item--{record.data.uid}" data-color-scheme="{record.data.tx_ce_kist_values_color_scheme}">
 					<f:render section="Item" arguments="{data: record.data, record: record, iterator: iterator, settings: settings}" />
 				</li>
 			</f:for>
