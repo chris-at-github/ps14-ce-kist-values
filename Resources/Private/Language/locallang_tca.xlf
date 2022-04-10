@@ -21,7 +21,28 @@
 				<source>Green-White</source>
 			</trans-unit>
 			<trans-unit id="tx_xo_domain_model_elements.color_scheme.white-black">
-				<source>Green-White</source>
+				<source>White-Black</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_domain_model_elements.color_scheme.purple-white">
+				<source>Purple-White</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_domain_model_elements.color_scheme.blue-white">
+				<source>Blue-White</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_domain_model_elements.color_scheme.yellow-white">
+				<source>Yellow-White</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_domain_model_elements.color_scheme.red-white">
+				<source>Red-White</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_domain_model_elements.color_scheme.darkgrey-white">
+				<source>Darkgrey-White</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_domain_model_elements.color_scheme.orange-white">
+				<source>Orange-White</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_domain_model_elements.color_scheme.turquoise-white">
+				<source>Turquoise-White</source>
 			</trans-unit>
 		</body>
 	</file>

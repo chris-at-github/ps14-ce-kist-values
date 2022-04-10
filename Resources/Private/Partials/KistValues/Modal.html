@@ -16,7 +16,9 @@
 			</button>
 
 			<div class="ce-kist-values__modal-media">
-				<f:render section="Media" arguments="{media: record.media.0, settings: settings.modules.kist_values.media.modal}" />
+				<f:if condition="{record.media.0}">
+					<f:render section="Media" arguments="{media: record.media.0, settings: settings.modules.kist_values.media.modal}" />
+				</f:if>
 			</div>
 
 			<div class="ce-kist-values__modal-content">

@@ -23,7 +23,7 @@ $ce-kist-values--use-css: true !default;
 		:root {
 			--kist-values__modal-background: #fff;
 			--kist-values__modal-color: #000;
-			--kist-values__modal-button-active: #ccc;
+			--kist-values__modal-button-active: #eee;
 		}
 
 		.ce-kist-values__modal-container {
@@ -119,6 +119,48 @@ $ce-kist-values--use-css: true !default;
 				--kist-values__modal-background: #46843e;
 				--kist-values__modal-color: #fff;
 				--kist-values__modal-button-active: #3C7434;
+			}
+
+			[data-color-scheme='purple-white'] {
+				--kist-values__modal-background: #a83377;
+				--kist-values__modal-color: #fff;
+				--kist-values__modal-button-active: #962a69;
+			}
+
+			[data-color-scheme='blue-white'] {
+				--kist-values__modal-background: #003d61;
+				--kist-values__modal-color: #fff;
+				--kist-values__modal-button-active: #09354f;
+			}
+
+			[data-color-scheme='yellow-white'] {
+				--kist-values__modal-background: #fecd05;
+				--kist-values__modal-color: #fff;
+				--kist-values__modal-button-active: #ffbd00;
+			}
+
+			[data-color-scheme='red-white'] {
+				--kist-values__modal-background: #d21929;
+				--kist-values__modal-color: #fff;
+				--kist-values__modal-button-active: #c40400;
+			}
+
+			[data-color-scheme='darkgrey-white'] {
+				--kist-values__modal-background: #373737;
+				--kist-values__modal-color: #fff;
+				--kist-values__modal-button-active: #2a2a2a;
+			}
+
+			[data-color-scheme='orange-white'] {
+				--kist-values__modal-background: #ee6823;
+				--kist-values__modal-color: #fff;
+				--kist-values__modal-button-active: #e2550c;
+			}
+
+			[data-color-scheme='turquoise-white'] {
+				--kist-values__modal-background: #009b94;
+				--kist-values__modal-color: #fff;
+				--kist-values__modal-button-active: #008c85;
 			}
 		}
 
