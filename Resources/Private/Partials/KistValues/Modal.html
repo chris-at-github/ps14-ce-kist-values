@@ -15,23 +15,23 @@
 				<xo:svg.inline source="assets/svg/close.svg" />
 			</button>
 
-			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-8">
-					<header class="ce-kist-values__modal-title">
-						<f:render partial="Header/Header" arguments="{header: data.title, layout: data.title_type}" />
-					</header>
+			<div class="ce-kist-values__modal-media">
+				<f:render section="Media" arguments="{media: record.media.0, settings: settings.modules.kist_values.media.modal}" />
+			</div>
 
-					<f:format.html>{data.description}</f:format.html>
-				</div>
+			<div class="ce-kist-values__modal-content">
+				<header class="ce-kist-values__modal-title">
+					<f:render partial="Header/Header" arguments="{header: data.title, layout: data.title_type}" />
+				</header>
+
+				<f:format.html>{data.description}</f:format.html>
 			</div>
 		</div>
 
 	</f:section>
 
 	<f:section name="Media">
-		<li class="ce-history-item__media-item">
-			<f:render partial="Components/Media" section="Picture" arguments="{
+		<f:render partial="Components/Media" section="Picture" arguments="{
 			file: media,
 			image: {
 				maxHeight: settings.maxHeight,
@@ -39,6 +39,5 @@
 			},
 			sizes: settings.mediaQueries
 		}" />
-		</li>
 	</f:section>
 </div>

@@ -15,10 +15,10 @@
 				<f:render partial="Components/Media" section="Picture" arguments="{
 					file: record.media.0,
 					image: {
-						maxHeight: settings.modules.kist_values.media.maxHeight,
-						cropVariant: settings.modules.kist_values.media.cropVariant
+						maxHeight: settings.modules.kist_values.media.listing.maxHeight,
+						cropVariant: settings.modules.kist_values.media.listing.cropVariant
 					},
-					sizes: settings.modules.kist_values.media.mediaQueries
+					sizes: settings.modules.kist_values.media.listing.mediaQueries
 				}" />
 			</f:if>
 		</button>

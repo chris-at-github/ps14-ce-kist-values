@@ -58,18 +58,37 @@ tt_content {
 
 plugin.tx_xo.settings.modules.kist_values {
 	media {
-		maxHeight = 370
-		cropVariant = default
-		mediaQueries {
-			992 {
-				maxHeight = 370
-				cropVariant = default
-				mediaQuery = (min-width: 992px)
+		listing {
+			maxHeight = 370
+			cropVariant = default
+			mediaQueries {
+				992 {
+					maxHeight = 370
+					cropVariant = default
+					mediaQuery = (min-width: 992px)
+				}
+				0 {
+					maxWidth = 490
+					cropVariant = default
+					mediaQuery = (min-width: 0px)
+				}
 			}
-			0 {
-				maxWidth = 490
-				cropVariant = default
-				mediaQuery = (min-width: 0px)
+		}
+
+		modal {
+			maxHeight = 500
+			cropVariant = default
+			mediaQueries {
+				992 {
+					maxHeight = 370
+					cropVariant = default
+					mediaQuery = (min-width: 992px)
+				}
+				0 {
+					maxWidth = 460
+					cropVariant = default
+					mediaQuery = (min-width: 0px)
+				}
 			}
 		}
 	}
