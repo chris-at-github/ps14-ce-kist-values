@@ -62,13 +62,13 @@ plugin.tx_xo.settings.modules.kist_values {
 			maxHeight = 370
 			cropVariant = default
 			mediaQueries {
-				992 {
-					maxHeight = 370
+				768 {
+					maxHeight = 260
 					cropVariant = default
-					mediaQuery = (min-width: 992px)
+					mediaQuery = (min-width: 768px)
 				}
 				0 {
-					maxWidth = 490
+					maxWidth = 240
 					cropVariant = default
 					mediaQuery = (min-width: 0px)
 				}
