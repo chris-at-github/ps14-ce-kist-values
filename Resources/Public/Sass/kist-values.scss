@@ -30,6 +30,7 @@ $ce-kist-values--use-css: true !default;
 		.ce-kist-values__container {
 			& {
 				@include make-row();
+				justify-content: center;
 				margin-top: 0;
 				padding: 0;
 				list-style: none;
