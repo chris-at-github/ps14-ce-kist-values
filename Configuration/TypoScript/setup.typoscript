@@ -60,16 +60,16 @@ plugin.tx_xo.settings.modules.kist_values {
 	media {
 		listing {
 			maxHeight = 370
-			cropVariant = default
+			cropVariant = thumbnail
 			mediaQueries {
 				768 {
 					maxHeight = 260
-					cropVariant = default
+					cropVariant = thumbnail
 					mediaQuery = (min-width: 768px)
 				}
 				0 {
 					maxWidth = 240
-					cropVariant = default
+					cropVariant = thumbnail
 					mediaQuery = (min-width: 0px)
 				}
 			}
@@ -77,21 +77,21 @@ plugin.tx_xo.settings.modules.kist_values {
 
 		modal {
 			maxWidth = 280
-			cropVariant = default
+			cropVariant = fullsize
 			mediaQueries {
 				992 {
 					maxWidth = 280
-					cropVariant = default
+					cropVariant = fullsize
 					mediaQuery = (min-width: 992px)
 				}
 				576 {
 					maxWidth = 180
-					cropVariant = default
+					cropVariant = fullsize
 					mediaQuery = (min-width: 576px)
 				}
 				0 {
 					maxWidth = 460
-					cropVariant = default
+					cropVariant = fullsize
 					mediaQuery = (min-width: 0px)
 				}
 			}
